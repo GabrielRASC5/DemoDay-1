@@ -63,11 +63,11 @@ let signPass= document.createElement('input');
 let confirmPass=document.createElement('input');
 let signButton = document.createElement("button");
 let checkPass = document.createElement("h4");
-let dropdown = document.createElement("div");
-let dropBtn = document.createElement("button")
-let dropCont = document.createElement("div")
-let role =document.createElement('a')
-let role2 =document.createElement('a')
+// let dropdown = document.createElement("div");
+// let dropBtn = document.createElement("button")
+// let dropCont = document.createElement("div")
+// let role =document.createElement('a')
+// let role2 =document.createElement('a')
 
 function signUpForm() {
   document.getElementsByClassName("login")[0].style.display="none";
@@ -101,22 +101,22 @@ function signUpForm() {
   confirmPass.setAttribute("placeholder", "Confirm Password");
   confirmPass.setAttribute("type", "password");
   signUp.appendChild(confirmPass);
-  //Selection
-  dropdown.setAttribute("class","dropdown");
-  dropBtn.setAttribute("class","dropBtn")
-  dropBtn.addEventListener("click",showDropDown)
-  dropBtn.innerHTML="Role"
-  dropCont.setAttribute('class','dropdown-content')
-  dropCont.setAttribute("id","myDropdown")
-  role.setAttribute("href","#")
-  role.innerHTML="User"
-  role2.setAttribute("href","#")
-  role2.innerHTML="Organization"
-  dropCont.appendChild(role)
-  dropCont.appendChild(role2)
-  dropdown.appendChild(dropBtn)
-  dropdown.appendChild(dropCont)
-  signUp.appendChild(dropdown)
+//   //Selection
+//   dropdown.setAttribute("class","dropdown");
+//   dropBtn.setAttribute("class","dropBtn")
+//   dropBtn.addEventListener("click",showDropDown)
+//   dropBtn.innerHTML="Role"
+//   dropCont.setAttribute('class','dropdown-content')
+//   dropCont.setAttribute("id","myDropdown")
+//   role.setAttribute("href","#")
+//   role.innerHTML="User"
+//   role2.setAttribute("href","#")
+//   role2.innerHTML="Organization"
+//   dropCont.appendChild(role)
+//   dropCont.appendChild(role2)
+//   dropdown.appendChild(dropBtn)
+//   dropdown.appendChild(dropCont)
+//   signUp.appendChild(dropdown)
   //Password check
   checkPass.setAttribute("id", "checkPass")
   signUp.appendChild(checkPass);
@@ -192,7 +192,7 @@ function logins(rowData){
       account = JSON.stringify(account);
       account = btoa(account);
       localStorage.setItem('_account', account);
-      document.location.href = "feed.html"
+      document.location.href = "index.html"
       break;
     } else if (userProfiles[profile].EMAIL !=txtEmail.value || userProfiles[profile].PASSWORD != textPass.value){
       console.log("wrong password or username")
@@ -204,13 +204,13 @@ function logins(rowData){
   // console.log(email)
 }
 
-function showDropDown() {
-    console.log("show");
-    document.getElementById("myDropdown").style.display = "block";
-}
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-    if (!event.target.matches('.dropBtn')) {
-      document.getElementById("myDropdown").style.display = "none";
-    }
-}
+// function showDropDown() {
+//     console.log("show");
+//     document.getElementById("myDropdown").style.display = "block";
+// }
+// // Close the dropdown menu if the user clicks outside of it
+// window.onclick = function(event) {
+//     if (!event.target.matches('.dropBtn')) {
+//       document.getElementById("myDropdown").style.display = "none";
+//     }
+// }
