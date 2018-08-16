@@ -1,0 +1,20 @@
+body{
+    background:linear-gradient(to bottom right, rgb(186,237,196),rgb(228,163,212)) 
+}
+
+#ligma{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    border: 5px outset black;
+    width: 350px;
+    margin-left: 500px;
+    margin-top: 0px; 
+}
+header{
+background-image: url("https://pbs.twimg.com/profile_images/739841829319888896/bfPsa1CU_400x400.jpg");
+height: 300px;
+width: 350px;
+margin-left: 500px;
+}
