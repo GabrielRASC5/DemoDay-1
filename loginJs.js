@@ -127,6 +127,7 @@ function signUpForm() {
   document.getElementsByClassName("signUp")[0].style.display="flex";
 }
 
+let newProfile= firebase.database().ref("profiles/"+id)
 confirmPass.addEventListener("keyup", function(){
   if(signPass.value ==confirmPass.value){
     confirmPass.value = signPass.value;
@@ -169,12 +170,13 @@ function updateDB(event){
     EMAIL:  email,
     PASSWORD: password
 }
-let newProfile= firebase.database().ref("profiles/"+id)
-  if(signPass.value!=null || confirmPass.value!=null || fullName.value!=null|| signEmail.value!=null){
-  checkPass.innerHTML ="Please fill in all fields!"
-} else if (signPass.value==null || confirmPass.value==null || fullName.value==null|| signEmail.value==null){
-    newProfile.update(value);
-  }
+// let newProfile= firebase.database().ref("profiles/"+id)
+//   if(signPass.value!=null || confirmPass.value!=null || fullName.value!=null|| signEmail.value!=null){
+//   checkPass.innerHTML ="Please fill in all fields!"
+// } else if (signPass.value==null || confirmPass.value==null || fullName.value==null|| signEmail.value==null){
+//     newProfile.update(value);
+//   }
+  newProfile.update(value);
 }
 
 let profiles= firebase.database().ref("profiles")
