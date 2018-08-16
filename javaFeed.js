@@ -7,10 +7,10 @@ localStorage.removeItem('_account');
 account = atob(account);
 account = JSON.parse(account);
 console.log(account)
-let account = {
-    NAME: "test",
-    ID: 12345667
-}
+// let account = {
+//     NAME: "test",
+//     ID: 12345667
+// }
  
 document.getElementById("username").innerHTML= account.NAME;
 let sideBar= document.getElementById("sideBar");
