@@ -1,183 +1,107 @@
-// let account = localStorage.getItem('_account');
-// if(account == null){
-//   document.location.href ="login.html"
-// }
-// localStorage.removeItem('_account');
-// console.log(account)
-// account = atob(account);
-// account = JSON.parse(account);
-// console.log(account)
+const profiles =document.createElement("div");
+profiles.setAttribute("class","profiles")
+const proTop=document.createElement("div")
+proTop.setAttribute('id',"proTop")
+const pic=document.createElement("div")
+pic.setAttribute('id',"pic")
+const info =document.createElement("div")
+info.setAttribute("class","info")
+const buttons=document.createElement("div")
+buttons.setAttribute('class',"buttons")
+const nameDis = document.createElement("h5")
+nameDis.setAttribute("id","nameDis")
+const username = document.createElement("h3")
+username.setAttribute("id","username")
+const emailDis = document.createElement("h5")
+emailDis.setAttribute("id","emailDis")
+const useremail = document.createElement("h3")
+useremail.setAttribute("id","useremail")
+const interestsDis = document.createElement("h5")
+interestsDis.setAttribute("id","interestsDis")
+const userInt = document.createElement("h3")
+userInt.setAttribute("id","userInt")
+const connect =document.createElement("button")
+connect.setAttribute("id","connect")
+const follow =document.createElement("button")
+follow.setAttribute("id","follow")
 
-let database = firebase.database().ref("posts")
-database.once("value",function(result){
-    console.log(result.val())
-})
-let container = document.getElementById("main_user");
-let mama = document.getElementById("sidebar");
-let face = document.getElementById("post");
-let insta = document.getElementById("feed");
 
 
-let user = {
-    name: "Yo Mama",
-    email: "YoMamaSoFine@damnson.org",
-    location: "Brooklyn,NY",
+let url = 'https://randomuser.me/api/?results=100&nat=us'
+let myJson;
+function printJson(response) {
+return response.json();
+};
+fetch(url)
+.then(printJson)
+.then(function(response){
+  myJson =response;
+  // alpha();
+  createProfiles(myJson);
+});
+
+
+function firstName(personData){
+  let namef = personData.first;
+  let first_name= namef.charAt(0).toUpperCase() +namef.slice(1);
+  return first_name;
+}
+function lastName(personData){
+  let namel = personData.last
+  let last_name= namel.charAt(0).toUpperCase()+namel.slice(1);
+  return last_name;
 }
 
 
-function userUser(user){
-    let userElement = document.createElement("h1");
-    userElement.innerHTML = user.name;
-    container.appendChild(userElement);
+function createProfiles(myJson){
+  // let proTop = document.createElement("div");
+  for(let i = 0; i<myJson.results.length;i++){
+    const profiles =document.createElement("div");
+    profiles.setAttribute("class","profiles")
+    const proTop=document.createElement("div")
+    proTop.setAttribute('id',"proTop")
+    const pic=document.createElement("div")
+    pic.setAttribute('id',"pic")
+    const info =document.createElement("div")
+    info.setAttribute("class","info")
+    const buttons=document.createElement("div")
+    buttons.setAttribute('class',"buttons")
+    const nameDis = document.createElement("h5")
+    nameDis.setAttribute("id","nameDis")
+    const username = document.createElement("h3")
+    username.setAttribute("id","username")
+    const emailDis = document.createElement("h5")
+    emailDis.setAttribute("id","emailDis")
+    const useremail = document.createElement("h3")
+    useremail.setAttribute("id","useremail")
+    const interestsDis = document.createElement("h5")
+    interestsDis.setAttribute("id","interestsDis")
+    const userInt = document.createElement("h3")
+    userInt.setAttribute("id","userInt")
+    const connect =document.createElement("button")
+    connect.setAttribute("id","connect")
+    const follow =document.createElement("button")
+    follow.setAttribute("id","follow")
+    proTop.appendChild(pic)
+    info.appendChild(nameDis)
+    info.appendChild(username)
+    info.appendChild(emailDis)
+    info.appendChild(useremail)
+    info.appendChild(interestsDis)
+    info.appendChild(userInt)
+    buttons.appendChild(connect)
+    buttons.appendChild(follow)
+    profiles.appendChild(proTop)
+    profiles.appendChild(info)
+    profiles.appendChild(buttons)
+    document.body.appendChild(profiles)
+    let picture =myJson.results[i].picture.large;
+    pic.style.backgroundImage = "url('" + picture + "')";
+    username.innerHTML = firstName(myJson.results[i].name) +" "+lastName(myJson.results[i].name)
+    useremail.innerHTML = myJson.results[i].email
+    nameDis.innerHTML="Name"
+    emailDis.innerHTML="Email"
+    connect.innerHTML="Connect"
+    follow.innerHTML="Follow"
+  }
 }
-
-
-function userMom(user){
-    let userMom = document.createElement("h1");
-    userMom.innerHTML = user.email;
-    container.appendChild(userMom);
-}
-
-
-
-function userLoser(user){
-    let userLoser = document.createElement("h1");
-    userLoser.innerHTML = user.location;
-    container.appendChild(userLoser);
-}
-
-
-
-function buttonUse(){
-    let press = document.createElement("button");
-    let walk = document.createElement("button");
-    press.id = "follow";
-    walk.id = "follow";
-    press.innerHTML = "Follow";
-    walk.innerHTML = "Message";
-    container.appendChild(press);
-    container.appendChild(walk);
-}
-
-
-
-function menu(){
-    let eventElement = document.createElement("h2");
-    let petitionElement = document.createElement("h2");
-    let watchElement = document.createElement("h2");
-    let settingsElement = document.createElement("h2");
-    eventElement.id = "event";
-    petitionElement.id = "petitions";
-    watchElement.id = "watch";
-    settingsElement.id = "settings";
-    eventElement.innerHTML = "Events/Protests";
-    petitionElement.innerHTML = "Petitions";
-    watchElement.innerHTML = "Watch";
-    settingsElement.innerHTML = "Settings";
-    mama.appendChild(eventElement);
-    mama.appendChild(petitionElement);
-    mama.appendChild(watchElement);
-    mama.appendChild(settingsElement);
-}
-
-function userFeed(){
-    let autoElement = document.createElement("h2");
-    autoElement.id = "enter";
-    autoElement.innerHTML = "Let your voice be heard..."
-    face.appendChild(autoElement);
-    let postElement = document.createElement("TEXTAREA");
-    postElement.cols = "50";
-    postElement.rows = "5";
-    postElement.id = "book";
-    postElement.innerHTML = "";
-    face.appendChild(postElement);
-    let click = document.createElement("button");
-    click.id = "click";
-    click.innerHTML = "Submit";
-    face.appendChild(click);
-    let messageElement = document.getElementById("book");
-    click.addEventListener("click", userWrite);
-
-    function userWrite(){
-        let message = messageElement.value;
-        messageElement = "";
-        console.log(message);
-        let id = "";
-        for(let i = 0; i<5; i++){
-            id += Math.floor(Math.random() * 10);
-        }
-        //Update database here
-        let value = {
-            NAME: user.name,
-            MESSAGE: message,
-            ID: id
-        }
-        let database = firebase.database().ref("posts/" + id)
-        database.update(value);
-    }
-    database.on("child_added", addMessagetoBoard,);
-
-
-    // let messageContainer = document.getElementById("book");
-
-    function addMessagetoBoard(rowData){
-        let row = rowData.val();
-        let message = row.MESSAGE;
-        let mainContainer = document.createElement("div");
-        mainContainer.id = "facebook"
-        let pElement = document.createElement("p");
-        pElement.id = "yeet";
-        pElement.innerText = message;
-        let proPic = document.createElement("img");
-        proPic.id = "generic";
-        proPic.src = "Profile_Pic.jpg";
-        let profileElement = document.createElement("h2");
-        profileElement.id = "luis";
-        profileElement.innerHTML = user.name;
-        mainContainer.appendChild(profileElement);
-        mainContainer.appendChild(proPic);
-        mainContainer.appendChild(pElement);   
-        insta.appendChild(mainContainer);
-    }   
-
-}
-
-// function addPost(user){
-//     let mainContainer = document.createElement("div");
-//     mainContainer.id = "facebook"
-//     // let pElement = document.createElement("p");
-//     // pElement.id = "yeet";
-//     // pElement.innerText = profile.name;
-//     let imageElement = document.createElement("img");
-//     imageElement.id = "news";
-//     imageElement.href = "https://medium.com/all-star-code/forget-work-life-balance-its-all-about-work-life-harmony-a6841eeb4ad6";
-//     imageElement.src = "Petition.png";
-//     let proPic = document.createElement("img");
-//     proPic.id = "generic";
-//     proPic.src = "Profile_Pic.jpg";
-//     let profileElement = document.createElement("h2");
-//     profileElement.id = "luis";
-//     profileElement.innerHTML = user.name;
-//     let articleElement = document.createElement("h3");
-//     articleElement.id = "article";
-//     // articleElement.href = "https://medium.com/all-star-code/forget-work-life-balance-its-all-about-work-life-harmony-a6841eeb4ad6";
-//     articleElement.innerHTML = "Help get 100 signatures on this petition!";
-//     mainContainer.appendChild(profileElement);
-//     mainContainer.appendChild(proPic);
-//     // mainContainer.appendChild(pElement);   
-//     mainContainer.appendChild(imageElement);
-//     mainContainer.appendChild(articleElement);
-//     insta.appendChild(mainContainer);
-// }  
-
-
-
-
-
-userUser(user);
-userMom(user);
-userLoser(user);
-buttonUse();
-menu();
-userFeed();
-addPost(user);
