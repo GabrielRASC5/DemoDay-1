@@ -1,6 +1,6 @@
 let account = localStorage.getItem('_account');
 if(account == null){
-  document.location.href ="index.html"
+  document.location.href ="login.html"
 }
 localStorage.removeItem('_account');
 // console.log(account)
