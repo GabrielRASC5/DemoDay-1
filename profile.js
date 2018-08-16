@@ -1,12 +1,12 @@
-let account = localStorage.getItem('_account');
+// let account = localStorage.getItem('_account');
 // if(account == null){
-//   document.location.href ="index.html"
+//   document.location.href ="login.html"
 // }
-localStorage.removeItem('_account');
-console.log(account)
-account = atob(account);
-account = JSON.parse(account);
-console.log(account)
+// localStorage.removeItem('_account');
+// console.log(account)
+// account = atob(account);
+// account = JSON.parse(account);
+// console.log(account)
 
 let database = firebase.database().ref("posts")
 database.once("value",function(result){
@@ -19,8 +19,8 @@ let insta = document.getElementById("feed");
 
 
 let user = {
-    name: "Example",
-    email: "Example@generic.org",
+    name: "Yo Mama",
+    email: "YoMamaSoFine@damnson.org",
     location: "Brooklyn,NY",
 }
 
@@ -136,39 +136,39 @@ function userFeed(){
         profileElement.innerHTML = user.name;
         mainContainer.appendChild(profileElement);
         mainContainer.appendChild(proPic);
-        mainContainer.appendChild(pElement);
+        mainContainer.appendChild(pElement);   
         insta.appendChild(mainContainer);
-    }
+    }   
 
 }
 
-function addPost(user){
-    let mainContainer = document.createElement("div");
-    mainContainer.id = "facebook"
-    // let pElement = document.createElement("p");
-    // pElement.id = "yeet";
-    // pElement.innerText = profile.name;
-    let imageElement = document.createElement("img");
-    imageElement.id = "news";
-    imageElement.href = "https://medium.com/all-star-code/forget-work-life-balance-its-all-about-work-life-harmony-a6841eeb4ad6";
-    imageElement.src = "NewsArticle.jpeg";
-    let proPic = document.createElement("img");
-    proPic.id = "generic";
-    proPic.src = "Profile_Pic.jpg";
-    let profileElement = document.createElement("h2");
-    profileElement.id = "luis";
-    profileElement.innerHTML = user.name;
-    let articleElement = document.createElement("a");
-    articleElement.id = "article";
-    articleElement.href = "https://medium.com/all-star-code/forget-work-life-balance-its-all-about-work-life-harmony-a6841eeb4ad6";
-    articleElement.innerHTML = "Forget Work Life Balance, It's All About Work Life Harmony";
-    mainContainer.appendChild(profileElement);
-    mainContainer.appendChild(proPic);
-    // mainContainer.appendChild(pElement);
-    mainContainer.appendChild(imageElement);
-    mainContainer.appendChild(articleElement);
-    insta.appendChild(mainContainer);
-}
+// function addPost(user){
+//     let mainContainer = document.createElement("div");
+//     mainContainer.id = "facebook"
+//     // let pElement = document.createElement("p");
+//     // pElement.id = "yeet";
+//     // pElement.innerText = profile.name;
+//     let imageElement = document.createElement("img");
+//     imageElement.id = "news";
+//     imageElement.href = "https://medium.com/all-star-code/forget-work-life-balance-its-all-about-work-life-harmony-a6841eeb4ad6";
+//     imageElement.src = "Petition.png";
+//     let proPic = document.createElement("img");
+//     proPic.id = "generic";
+//     proPic.src = "Profile_Pic.jpg";
+//     let profileElement = document.createElement("h2");
+//     profileElement.id = "luis";
+//     profileElement.innerHTML = user.name;
+//     let articleElement = document.createElement("h3");
+//     articleElement.id = "article";
+//     // articleElement.href = "https://medium.com/all-star-code/forget-work-life-balance-its-all-about-work-life-harmony-a6841eeb4ad6";
+//     articleElement.innerHTML = "Help get 100 signatures on this petition!";
+//     mainContainer.appendChild(profileElement);
+//     mainContainer.appendChild(proPic);
+//     // mainContainer.appendChild(pElement);   
+//     mainContainer.appendChild(imageElement);
+//     mainContainer.appendChild(articleElement);
+//     insta.appendChild(mainContainer);
+// }  
 
 
 
@@ -181,24 +181,3 @@ buttonUse();
 menu();
 userFeed();
 addPost(user);
-
-
-function SearchFunction(){
-    document.getElementById("myDropdown").classList.toggle("show");
-  }
-  function filterFunction(){
-    var input,filter,ul,li,a,i;
-    input=document.getElementById("myInput");
-    filter= input.value.toUpperCase();
-    div= document.getElementById("myDropdown")
-    console.log(div)
-    a = div.getElementsByTagName("a");
-    for (i = 0; i<a.length; i ++){
-      if (a[i].innerHTML.toUpperCase().indexOf(filter)>-1){
-        a[i].style.display="";
-      }
-      else {
-        a[i].style.display="none";
-      }
-    }
-  }
