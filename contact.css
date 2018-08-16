@@ -1,0 +1,39 @@
+body{
+    background: url("http://i.imgur.com/zrlhTDT.gif");
+    background-size: cover;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    color: aliceblue;
+    margin-top: 300px;
+
+}
+#Luis{
+    /* display: flex;
+    justify-content: flex-start; */
+    color: white;
+    /* margin-right: 50px; */
+}
+#Gabe{
+    /* display: flex;
+    justify-content: center; */
+    color: aliceblue;
+}
+
+#Tony{
+/* display: flex;
+justify-content: flex-end; */
+color: aliceblue;
+}
+
+.EMAIL{
+    color: aqua
+}
+#Feed{
+    display: flex;
+    justify-content: center;
+    color: aqua;
+}
