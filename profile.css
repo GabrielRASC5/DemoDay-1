@@ -1,199 +1,165 @@
-​body{
-background:whitesmoke;
+body{
+  display: flex;
+  /* flex-direction: row; */
+  flex-flow: row wrap;
+  background: linear-gradient(to bottom right, rgb(186, 237, 196), rgb(228, 163, 212));
+}
 
+.topNav{
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Bree Serif', serif;
+  align-items: center;
+  font-size: 30px;
+  position: sticky;
+  top: 0px;
+  width:100%;
+  height: 8vh;
+  background-color: rgb(72, 116, 150);
+  padding: 5px;
+  border-radius: 15px;
+  color: black;
 }
-a{
-font-size: 50px;
-color: aliceblue;
+
+#contact{
+  margin-right: 6%;
 }
-img{
-height: 100px;
-width: 100px;
+
+#search{
+  margin-left: -13%;
 }
-#topBar{
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   flex-direction: row;
-   background:rgba(72, 116, 150);
+#search:hover{
+  color: white;
 }
-#saying{
-   /* display: flex;
-   justify-content: flex-start;
-   align-content: flex-start; */
-   font-size:17.71px;
-   font-family: 'Ranga',cursive;
-   margin-right: 15px;
-   color: aliceblue;
-   text-align: center;
-   margin-top: 0px;
-margin-right: 0px;
+
+#feed:hover{
+  color: white;
 }
-#motto{
-   width: 100px;
-   height: 60px;
-   background-color:rgba(72, 116, 150);
-   display: flex;
-   justify-content: flex-start;
-   align-content: flex-start;
-   margin-left: 587px;
-   
+
+#map:hover{
+  color: white;
 }
-#post{
-   display: none;
+
+#contact:hover{
+  color:white;
+}
+
+#svg{
+  border-style: none;
+  margin-top: auto;
+  height: 75px;
+  width: 75px;
+  margin-left: 6%;
+  border-radius: 15px;
+  background-color: rgb(72,116,150);
+}
+
+.profiles{
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  font-family: "Bree Serif",cursive;
+  justify-content: center;
+  height: 400px;
+  width: 300px;
+  margin: 50px;
+  border-radius: 7px;
+  font-size: 20px;
+  background-color: rgb(240, 240, 240);
+}
+
+#proTop{
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  width: 100%;
+  height: 30%;
+  border-radius: 7px 7px 0px 0px;
+  background-color: rgb(203, 199, 199);
 }
 
 #pic{
-    height: 250px;
-    width: 235px;
+  display: flex;
+  position: relative;
+  margin-top: 35px;
+  z-index: 2;
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  background-color: white;
 }
 
-.profile_pic{
-    background-image:  url("demoLogo.jpg");
-    height: 250px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border: black 2px solid;
+.info{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.profile{
-    margin: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+#nameDis{
+  margin:auto auto -5px auto;
+  color: grey;
 }
 
-#main_user{
-   background-color: rgba(72, 116, 150); 
-    border-bottom:  rgba(72, 116, 150) 10px solid;
-    margin: 5px;
-    text-align: center;
+#username{
+  margin: 0px auto -5px auto;
 }
 
-.button{
-    background-color: rgb(182, 182, 182); 
-    border-top:  rgb(182, 182, 182) 10px solid;
+#emailDis{
+  margin:auto auto -5px auto;
+  color: grey;
+}
+#useremail{
+  margin: 0px auto -5px auto;
+}
+
+#interestsDis{
+  margin:auto auto -5px auto;
+  color: grey;
+}
+
+#userInt{
+  margin: 0px auto 30px auto;
+}
+
+.buttons{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  width: 300px;
+}
+
+#connect{
+  border-style: none;
+  height: 30px;
+  width: 80px;
+  outline: none;
+  margin-left: 50px;
+  border-radius: 5px;
+}
+
+#connect:hover {background-color: rgb(161,161,161)}
+#connect:active {
+  background-color: rgb(161,161,161);
+  box-shadow: 0 2px #666;
+  transform: translateY(2px);
 }
 
 #follow{
-    border:rgba(72, 116, 150);
+  border-style: none;
+  height: 30px;
+  margin-right: 50px;
+  width: 80px;
+  outline: none;
+  border-radius: 5px;
 }
 
-#sidebar{
-
-    display: flex;
-    background-color: rgba(72, 116, 150);
-    border-top:  black 5px solid;
-    border-right: black 5px solid;
-    border-left: black 5px solid;
-    border-bottom: black 5px solid;
-    /* border-bottom: black 5px solid; */
-    flex-direction: column;
-        justify-content: space-evenly;
-    height: 400px;
-    width: 225px;
+#follow:hover {background-color: rgb(161, 161, 161)}
+#follow:active {
+  background-color: rgb(161,161,161);
+  box-shadow: 0 2px #666;
+  transform: translateY(2px);
 }
 
-#event{
-    border-bottom: black 5px solid;
-    
-}
-
-#petitions{
-    border-bottom: black 5px solid;
-}
-
-#watch{
-    border-bottom: black 5px solid;
-}
-
-/* #settings{
-    border-bottom: black 5px solid;
-} */
-
-.main_post{
-    display: inline-flex;
-    height: 600px;
-}
-
-#post{
-    display: flex;
-    flex-direction: column;
-}
-
-#book{
-    margin-left: 50px;
-    height: 100px;
-    width: 769px;
-    background-color: antiquewhite;
-}
-
-#enter{
-    margin-left: 50px;
-}
-
-#click{
-    margin-left: 725px;
-    width:100px;
-    height:75px;
-}
-
-#snap{
-    display: inline-flex;
-    flex-direction: column;
-}
-
-#generic{
-    margin-left: 50px;
-    margin-top: 30px;
-    margin-bottom: 66px;
-    border: 3px black solid;
-}
-
-#feed{
-    display: flex;
-    flex-direction: column;
-    height: 50%;
-    width: 85%;
-    /* border: 5px solid black; */
-    margin-left: 50px;
-    margin-top: 100px;
-}
-
-#luis{
-    margin-left: 66px;
-    margin-top: 33px;
-}
-
-#facebook{
-    border: black solid 3px;
-    /* height:500px;
-    width: 500px; */
-    padding-right: 245px;
-    margin-bottom: 20px;
-}
-
-#content{
-    display: flex;
-    flex-direction: column-reverse;
-}
-
-#news{
-    margin-left: 125px;
-    margin-top: 0px;
-    height: 250px;
-    width: 350px;
-}
-
-#yeet{
-    color: black;
-    font-size: 23px;
-    font: small-caps;
-    margin-left: 100px;
-    margin-bottom: 50px;
-
+#test{
+  padding-bottom: 2000px;
 }
