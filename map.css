@@ -1,0 +1,29 @@
+body{
+    background: url("http://maps-nyc.com/img/0/new-york-map-usa.jpg");
+    background-size: cover;
+}
+#allStar{
+    background-image: url("https://pbs.twimg.com/profile_images/739841829319888896/bfPsa1CU_400x400.jpg");
+ background-size: 100% 100%;
+ box-shadow: 0 1.5px #999;
+display: flex;
+justify-content: flex-end;
+right: 132px;
+position: absolute;
+top: 290px;
+    height: 15px;
+    width: 15px;
+    border: 1px outset rgb(73, 161, 243);
+    border-radius: 10px;
+
+}
+#allStar:active{
+    background-image: url("https://pbs.twimg.com/profile_images/739841829319888896/bfPsa1CU_400x400.jpg");
+    background-size: 100% 100%;
+    box-shadow: 0 1.5px #999;
+    transform: translateY(3px)
+}
+
+#topbar{
+    
+}

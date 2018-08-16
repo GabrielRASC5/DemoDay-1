@@ -1,0 +1,327 @@
+body {
+    display: flex;
+    justify-content: center;
+    font-family: 'Bree Serif', serif;
+  -webkit-animation: background 30s infinite;
+
+  }
+  @-webkit-keyframes background {
+    0% {
+      background: url("https://i2.wp.com/newsfromthepews.org/wp-content/uploads/2016/08/bigstock-Love-silhouette-78847766.jpg?resize=640%2C280");
+      background-size: 1900px; ;
+    }
+    25% {
+      background: url("https://timedotcom.files.wordpress.com/2015/11/martin-luther-king-jr.jpg");
+      background-size: cover;
+
+    }
+    50% {
+      background: url("https://youngbarhub.com/wp-content/uploads/2015/08/committee-banner.jpg");
+      background-size: cover;
+    }
+    75% {
+      background: url("https://media.istockphoto.com/photos/silhouette-of-helping-hand-picture-id495880422?k=6&m=495880422&s=612x612&w=0&h=xzcCr_zIu8-cEy_ua6irV5W-smPm9orUnze3PDXmbWQ=");
+      background-size: cover;
+    }
+    100% {
+      background: url("https://static1.squarespace.com/static/57e29544d2b8579de6045d77/589364b0cd0f68d48f0c0856/58af466d46c3c4b688c43420/1487882411317/251837-New_York_City-city-USA-Freedom_Tower-Manhattan-Hudson_River-winter-river-One_World_Trade_Center.jpg");
+      background-size: 1500px;
+    }
+  }
+
+  .user{
+    display: flex;
+    flex-flow: wrap;
+    height: 80vh;
+    width: 80vh;
+    /* background-color: rgba(255, 255, 255, 1); */
+    border-radius: 45px;
+    background: rgba(209, 253, 255, 0.85);
+  }
+
+  .login {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    height: 80%;
+
+  }
+
+
+  #log {
+    display: flex;
+    outline: none;
+    background-color: rgba(255, 244, 223, 0.85);
+    font-family: 'Bree Serif', serif;
+    border-style: none;
+    /* background-color: grey; */
+    border-radius: 45px 0px 25px 0px;
+    /* background-color: rgba(255, 255, 255, 1); */
+    font-size: 40px;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 10%;
+
+  }
+
+  #sign {
+    display: flex;
+    outline: none;
+    font-family: 'Bree Serif', serif;
+    border-style: none;
+    background-color:rgba(255, 244, 223, 0.85);
+    border-radius: 0px 45px 0px 25px;
+    font-size: 40px;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 10%;
+  }
+
+  #logintxt{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+  }
+
+  #textEmail {
+    font-family: 'Bree Serif', serif;
+    margin-top: 10px;
+    width: 80%;
+    height: 5vh;
+    font-size: 30px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 45px;
+    border-color: blue;
+    border-width: 3px;
+    outline: none;
+    border-style: solid;
+    -webkit-animation: colorchange 20s infinite;
+  }
+
+  #textPass {
+    font-family: 'Bree Serif', serif;
+    width: 80%;
+    height: 5vh;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 10px;
+    border-radius: 45px;
+    border-color: blue;
+    border-width: 3px;
+    outline: none;
+    border-style: solid;
+    -webkit-animation: colorchange 20s infinite;
+    /* -webkit-animation: error 1s infinite; */
+  }
+
+  #login {
+    background-color: rgb(66, 162, 241);
+    border-style: none;
+    font-family: 'Bree Serif', serif;
+    border-radius: 15px;
+    font-size: 25px;
+    height: 5vh;
+    width: 9vw;
+    outline: none;
+    margin-left: 10%;
+    box-shadow: 1px 2px 1px 1px;
+  }
+
+  #container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  #error{
+    display: none;
+    font-size: 20px;
+    color: red;
+    margin-left: 10%;
+    height: 20px;
+    width: 45%;
+  }
+
+  #login:hover {
+    background-color: rgb(244, 242, 88);
+  }
+
+  #login:active {
+    background-color: rgb(244, 242, 88);
+    box-shadow: 0 1px;
+    transform: translateY(2px);
+  }
+
+  @-webkit-keyframes colorchange {
+    0% {
+      border-color: red;
+    }
+    25% {
+      border-color: yellow;
+    }
+    50% {
+      border-color: blue;
+    }
+    75% {
+      border-color: green;
+    }
+    100% {
+      border-color: red;
+    }
+  }
+
+  .signUp{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-content: flex-start;
+    height: 80%;
+  }
+
+  #signInfoText{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+
+  #fullName{
+    font-family: 'Bree Serif', serif;
+    width: 80%;
+    height: 5vh;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 10px;
+    border-radius: 45px;
+    border-color: blue;
+    border-width: 3px;
+    outline: none;
+    border-style: solid;
+    -webkit-animation: colorchange 30s infinite;
+  }
+
+  #signEmail{
+    font-family: 'Bree Serif', serif;
+    width: 80%;
+    height: 5vh;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 10px;
+    border-radius: 45px;
+    border-color: blue;
+    border-width: 3px;
+    outline: none;
+    border-style: solid;
+    -webkit-animation: colorchange 30s infinite;
+  }
+
+  #signPass{
+    font-family: 'Bree Serif', serif;
+    width: 80%;
+    height: 5vh;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 10px;
+    border-radius: 45px;
+    border-color: blue;
+    border-width: 3px;
+    outline: none;
+    border-style: solid;
+    -webkit-animation: colorchange 30s infinite;
+  }
+
+  #confPass{
+    font-family: 'Bree Serif', serif;
+    width: 80%;
+    height: 5vh;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 10px;
+    border-radius: 45px;
+    border-color: blue;
+    border-width: 3px;
+    outline: none;
+    border-style: solid;
+    -webkit-animation: colorchange 30s infinite;
+  }
+
+  #signUpBtn{
+    background-color: rgb(66, 162, 241);
+    border-style: none;
+    font-family: 'Bree Serif', serif;
+    border-radius: 15px;
+    font-size: 25px;
+    height: 5vh;
+    width: 12vw;
+    outline: none;
+    margin-right: 10%;
+    box-shadow: 1px 2px 1px 1px;
+  }
+
+  #signUpBtn:hover {
+    background-color: rgb(244, 242, 88);
+  }
+
+  #signUpBtn:active {
+    background-color: rgb(244, 242, 88);
+    box-shadow: 0 1px;
+    transform: translateY(2px);
+  }
+
+  #checkPass{
+    display: flex;
+    margin-right: 20%;
+    margin-top: 10px;
+    font-size: 20px;
+    color: red;
+    height: 20px;
+    width: 250px;
+  }
+
+  @-webkit-keyframes error {
+    0% {
+      background-color: white;
+    }
+    25% {
+      background-color: rgba(210, 45, 45, 0.74);
+    }
+    50% {
+      background-color: rgba(210, 45, 45, 0.74);
+    }
+    75% {
+      background-color: rgba(210, 45, 45, 0.74);
+    }
+    100% {
+      background-color: white;
+    }
+  }

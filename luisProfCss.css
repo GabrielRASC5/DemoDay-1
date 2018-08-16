@@ -1,0 +1,164 @@
+body{
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom right, rgb(186, 237, 196), rgb(228, 163, 212));
+}
+
+.topNav{
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Bree Serif', serif;
+  align-items: center;
+  font-size: 30px;
+  position: sticky;
+  top: 0px;
+  width:100%;
+  height: 8vh;
+  background-color: rgb(72, 116, 150);
+  padding: 5px;
+  border-radius: 15px;
+  color: black;
+}
+
+#contact{
+  margin-right: 6%;
+}
+
+#search{
+  margin-left: -13%;
+}
+#search:hover{
+  color: white;
+}
+
+#feed:hover{
+  color: white;
+}
+
+#map:hover{
+  color: white;
+}
+
+#contact:hover{
+  color:white;
+}
+
+#svg{
+  border-style: none;
+  margin-top: auto;
+  height: 75px;
+  width: 75px;
+  margin-left: 6%;
+  border-radius: 15px;
+  background-color: rgb(72,116,150);
+}
+
+.profiles{
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  font-family: "Bree Serif",cursive;
+  justify-content: center;
+  height: 400px;
+  width: 300px;
+  margin: 50px;
+  border-radius: 7px;
+  font-size: 20px;
+  background-color: rgb(240, 240, 240);
+}
+
+#proTop{
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  width: 100%;
+  height: 30%;
+  border-radius: 7px 7px 0px 0px;
+  background-color: rgb(203, 199, 199);
+}
+
+#pic{
+  display: flex;
+  position: relative;
+  margin-top: 35px;
+  z-index: 2;
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.info{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#nameDis{
+  margin:auto auto -5px auto;
+  color: grey;
+}
+
+#username{
+  margin: 0px auto -5px auto;
+}
+
+#emailDis{
+  margin:auto auto -5px auto;
+  color: grey;
+}
+#useremail{
+  margin: 0px auto -5px auto;
+}
+
+#interestsDis{
+  margin:auto auto -5px auto;
+  color: grey;
+}
+
+#userInt{
+  margin: 0px auto 30px auto;
+}
+
+.buttons{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  width: 300px;
+}
+
+#connect{
+  border-style: none;
+  height: 30px;
+  width: 80px;
+  outline: none;
+  margin-left: 50px;
+  border-radius: 5px;
+}
+
+#connect:hover {background-color: rgb(161,161,161)}
+#connect:active {
+  background-color: rgb(161,161,161);
+  box-shadow: 0 2px #666;
+  transform: translateY(2px);
+}
+
+#follow{
+  border-style: none;
+  height: 30px;
+  margin-right: 50px;
+  width: 80px;
+  outline: none;
+  border-radius: 5px;
+}
+
+#follow:hover {background-color: rgb(161, 161, 161)}
+#follow:active {
+  background-color: rgb(161,161,161);
+  box-shadow: 0 2px #666;
+  transform: translateY(2px);
+}
+
+#test{
+  padding-bottom: 2000px;
+}

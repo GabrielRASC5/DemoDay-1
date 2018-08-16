@@ -1,0 +1,147 @@
+body{
+    -webkit-animation: colorchange 20s infinite;
+}
+@-webkit-keyframes colorchange {
+    0% {
+      background: aliceblue;
+    }
+    25% {
+      background:  rgb(141, 184, 221);
+    }
+    50% {
+      background: rgb(245, 224, 227);
+    }
+    75% {
+      background: rgb(217, 240, 219);
+    }
+    100% {
+      background: rgba(230, 216, 208, 0.856);
+    }
+  }
+img{
+height: 100px;
+width: 100px;
+}
+#topBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    height: 100px;
+    background:rgba(72, 116, 150);
+}
+#saying{
+    /* display: flex;
+    justify-content: flex-start;
+    align-content: flex-start; */
+    font-size:17.71px;
+    font-family: 'Ranga',cursive;
+    margin-right: 15px;
+    color: aliceblue;
+    text-align: center;
+    margin-top: 0px;
+margin-right: 0px;
+}
+#motto{
+    width: 100px;
+    height: 60px;
+    background-color:rgba(72, 116, 150);
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+    margin-left: 587px;
+
+}
+#post{
+    display: none;
+}
+#submitButton{
+    background-color:rgba(72, 116, 150);
+    color: aliceblue;
+}
+#pButton{
+    background-color:rgba(72, 116, 150);
+    color: aliceblue;
+    margin-top:0px;
+    border: 2px outset  aliceblue;
+}
+
+.main_container{
+    background-color:rgba(72, 116, 150);
+    color: aliceblue;
+    width: 800px;
+    margin-left: 100px;
+}
+#sideBar{
+    background-color:rgba(72, 116, 150, 0.74);
+    width: 100px;
+    font-size: 15px;
+}
+h2{
+    color: aliceblue;
+}
+#poster{
+  display: flex;
+justify-content: center;
+margin-right: 75px;
+
+}
+
+
+
+.dropbtn {
+    background-color: #4CAF50;
+    background: rgba(72, 116, 150);
+
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none outset rgb(238, 246, 255);
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #rgba(72, 116, 150);
+      border: none outset rgb(238, 246, 255);
+}
+
+#myInput {
+    border-box: box-sizing;
+    background-image: url('searchicon.png');
+    background-position: 14px 12px;
+    background-repeat: no-repeat;
+    font-size:10px;
+    padding: 14px 20px 12px 45px;
+    border: none;
+    border-bottom: 1px solid  rgb(255, 237, 255);
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-search-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(72, 116, 150,0.77);
+    min-width: 100px;
+    overflow: auto;
+    border: 1px solid rgb(255, 237, 255);
+    z-index: 1;
+    border-radius: 7px;k
+}
+
+.dropdown-search-content a {
+    font-size: 10px;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: aliceblue;
+}
+
+.SearchBar a:hover {background: rgba(72, 116, 150);}
+
+.show {display: block;}
