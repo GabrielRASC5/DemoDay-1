@@ -80,7 +80,7 @@ function signUpForm() {
   signUp = document.body.getElementsByClassName("signUp")[0];
   //Sign up text Info
   signInfoText.setAttribute("id","signInfoText")
-  signInfoText.innerHTML = "Sign up for a JMM account in order to join stuff..blah.blah";
+  signInfoText.innerHTML = "Sign up for a JMM account and make a difference today!";
   signUp.appendChild(signInfoText);
   //Full name text element
   fullName.setAttribute("id", "fullName")
