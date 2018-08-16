@@ -8,19 +8,19 @@
 // account = JSON.parse(account);
 // console.log(account)
 let account = {
-    NAME: "Luis",
+    NAME: "test",
     ID: 12345667
 }
-
+ 
 document.getElementById("username").innerHTML= account.NAME;
 let sideBar= document.getElementById("sideBar");
 const messageElement = document.getElementById("message");
 const button = document.getElementById("pButton");
 button.addEventListener("click",updateDB);
-
+ 
 let database = firebase.database().ref("posts")
-
-
+ 
+ 
 function updateDB(event){
   let id="";
   for(let i=0;i<5;i++){
@@ -41,10 +41,10 @@ function updateDB(event){
   }
   database.update(value);
 }
-
+ 
 const post = document.querySelector(".post")
 database.on("child_added",addMessagetoBoard)
-
+ 
 function addMessagetoBoard(rowdata){
   let row = rowdata.val();
   let profiles = firebase.database().ref("profiles/" + row.AUTHOR_ID)
@@ -59,16 +59,19 @@ function addMessagetoBoard(rowdata){
     post.appendChild(pElement)
   })
 }
-
-
+ 
+ 
 function menu(){
-  let eventElement = document.createElement("h2");
-  let petitionElement = document.createElement("h2");
-  let watchElement = document.createElement("h2");
-  let settingsElement = document.createElement("h2");
+  let eventElement = document.createElement("a");
+  let petitionElement = document.createElement("a");
+  let watchElement = document.createElement("a");
+  let settingsElement = document.createElement("a");
   eventElement.id = "event";
   petitionElement.id = "petitions";
   watchElement.id = "watch";
+  watchElement.addEventListener("click",function(){
+    document.location.href="watch.html"
+  });  
   settingsElement.id = "settings";
   eventElement.innerHTML = "Events";
   petitionElement.innerHTML = "Petitions";
@@ -80,19 +83,18 @@ function menu(){
   sideBar.appendChild(settingsElement);
 }
 menu();
-
 let url ="https://newsapi.org/v2/top-headlines?country=us&apiKey=0294eb9dc63942de8e76886e3c2aa5c1"
 let myJson;
 function printJson(response){
   return response.json();
 }
-
+ 
 fetch(url)
   .then(printJson)
   .then(function(response){
     myJson =response;
   })
-
+ 
 function news(){
   for(let i=0;i<3;i++){
     let ref =myJson.articles[i]
@@ -104,7 +106,7 @@ function news(){
     document.getElementById("title"+[i]).innerHTML = "#"+title;
     document.getElementById("news"+[i]).style.backgroundImage = "url("+img+")";
   }
-
+ 
 }
 setTimeout(news,3000);
 
@@ -127,3 +129,4 @@ setTimeout(news,3000);
          }
        }
      }
+
